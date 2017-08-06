@@ -93,5 +93,24 @@ var markers = {
 			author: "barrettxav",
 			commentsId: "6k84a9"
 		}
+	},
+	"6lbw22": {
+		data: {
+			displayName: "Dunedin, New Zealand",
+			means: [
+				"bus"
+			],
+			position: {
+				lat: -45.8725528,
+				lng: 170.4570792
+			}
+		},
+		meta: {
+			adder: "naseweis520"
+		},
+		reddit: {
+			author: "detreetus",
+			commentsId: "6lbw22"
+		}
 	}
 };
