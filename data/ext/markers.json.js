@@ -173,4 +173,24 @@ var markers = {
 			poster: "naseweis520"
 		}
 	},
+	"6s1bfm": {
+		data: {
+			displayName: "New York City, USA",
+			means: [
+				"metro"
+			],
+			position: {
+				lat: 40.7127837,
+				lng: -74.0059413
+			}
+		},
+		meta: {
+			adder: "naseweis520"
+		},
+		reddit: {
+			author: "playhouse_animation",
+			commentsId: "6s1bfm",
+			poster: "naseweis520"
+		}
+	},
 };
