@@ -111,9 +111,9 @@ jQuery(document).ready(function($) {
 		},
 		reddit: {
 			author: "` + _e( ($("#form_redditPosterIsAuthor").is(":checked") ? $("#form_redditPoster").val() : $("#form_redditAuthor").val()) ) + `",
-			commentsId: "` + _e($("#form_redditCommentId").val()) + `"` + "\n" +
-(!$("#form_redditPosterIsAuthor").is(":checked") ? `			poster: "` + _e($("#form_redditPoster").val()) + `"` + "\n" : "") +
-`		}
+			commentsId: "` + _e($("#form_redditCommentId").val()) + `"` + "" +
+(!$("#form_redditPosterIsAuthor").is(":checked") ? `,\n			poster: "` + _e($("#form_redditPoster").val()) + `"` : "") +
+`\n		}
 	},`;
 
 		$("#form_output textarea").val(output);
