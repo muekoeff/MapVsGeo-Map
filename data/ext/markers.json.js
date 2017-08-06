@@ -112,5 +112,25 @@ var markers = {
 			author: "detreetus",
 			commentsId: "6lbw22"
 		}
-	}
+	},
+	"6s12co": {
+		data: {
+			displayName: "Athen, Greece",
+			means: [
+				"metro"
+			],
+			position: {
+				lat: 37.9838096,
+				lng: 23.7275388
+			}
+		},
+		meta: {
+			adder: "naseweis520"
+		},
+		reddit: {
+			author: "vroidos",
+			commentsId: "6s12co",
+			poster: "naseweis520"
+		}
+	},
 };
