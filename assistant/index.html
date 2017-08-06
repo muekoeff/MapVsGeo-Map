@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>/r/MapVsGeo | Add an entry</title>
+		<link href="data/css/style.css" media="all" rel="stylesheet" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="page-header">
+				<h1>Add an entry</h1>
+			</div>
+			<form>
+				<div class="panel panel-default">
+					<div class="panel-heading">Assistant</div>
+					<div class="panel-body">
+						<p>Some data can be automatically retrieved via the Reddit API. This step is optional but can be quite handy at times.</p>
+						<label for="form_redditUrl">Reddit URL</label>
+						<div>
+							<div id="form_redditUrl_result_success" class="alert alert-success" role="alert" style="display:none"><i class="glyphicon glyphicon-ok"></i> Data successfully fetched.</div>
+							<div id="form_redditUrl_result_error" class="alert alert-danger" role="alert" style="display:none"><i class="glyphicon glyphicon-remove"></i> Data fetch failed.</div>
+							<div id="form_redditUrl_result_invalid" class="alert alert-danger" role="alert" style="display:none"><i class="glyphicon glyphicon-remove"></i> Invalid URL given.</div>
+						</div>
+						<div class="input-group">
+							<span id="form_redditUrl_addon" class="input-group-addon"><i class="glyphicon glyphicon-option-horizontal"></i></span>
+							<input id="form_redditUrl" class="form-control" name="redditUrl" type="url" />
+							<span class="input-group-btn">
+								<button id="form_redditUrl_button" class="btn btn-default" type="button">Fetch</button>
+							</span>
+						</div>
+					</div>
+				</div>
+
+				<h3>Meta</h3>
+				<label for="form_metaAdder">Your Reddit username</label>
+				<input id="form_metaAdder" class="form-control" name="metaAdder" type="text" />
+
+				<h3>Reddit</h3>
+				<div class="row">
+					<div class="col-md-6">
+						<label for="form_redditPoster">Poster</label>
+						<input id="form_redditPoster" class="form-control" name="redditPoster" title="reddit.poster" type="text" />
+						<input id="form_redditPosterIsAuthor" name="redditPosterIsAuthor" type="checkbox" /> <label for="form_redditPosterIsAuthor">Poster is OC-creator and author</label>
+					</div>
+					<div class="col-md-6">
+						<label for="form_redditAuthor">Author</label>
+						<input id="form_redditAuthor" class="form-control" name="redditAuthor" title="reddit.author" type="text" />
+					</div>
+				</div>
+				<label for="form_redditCommentId">CommentId</label>
+				<input id="form_redditCommentId" class="form-control" name="redditCommentId" title="reddit.commentId" type="text" />
+
+				<h3>Data</h3>
+				<label for="form_dataDisplayName">Human-readable location / Display name &dash; <em>(City, Country)</em></label>
+				<input id="form_dataDisplayName" class="form-control" name="dataDisplayName" title="data.displayName" type="text" />
+				<div class="panel panel-default">
+					<div class="panel-heading">Assistant</div>
+					<div class="panel-body">
+						<p>The assistant can try to automatically request the coordinates using Google's Geocoding Web Service.</p>
+						<div>
+							<div id="form_dataPositionFetcher_result_success" class="alert alert-success" role="alert" style="display:none"><i class="glyphicon glyphicon-ok"></i> Data successfully fetched. <em></em></div>
+							<div id="form_dataPositionFetcher_result_error" class="alert alert-danger" role="alert" style="display:none"><i class="glyphicon glyphicon-remove"></i> Data fetch failed.</div>
+							<div id="form_dataPositionFetcher_result_invalid" class="alert alert-danger" role="alert" style="display:none"><i class="glyphicon glyphicon-remove"></i> No matches found. <em></em></div>
+						</div>
+						<button id="form_dataPositionFetcher_button" class="btn btn-default" type="button">Fetch</button>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6">
+						<label for="form_dataPositionLat">Latitude</label>
+						<input id="form_dataPositionLat" class="form-control" name="dataPositionLat" title="data.position.lat" type="text" />
+					</div>
+					<div class="col-md-6">
+						<label for="form_dataPositionLng">Longitude</label>
+						<input id="form_dataPositionLng" class="form-control" name="dataPositionLng" title="data.position.lng" type="text" />
+					</div>
+				</div>
+				<label for="form_dataMeans">Means of transportation &dash; <em>(cf. documentation!, separate with comma <em>,</em> and <strong>only</strong> with a comma - so no space)</em></label>
+				<input id="form_dataMeans" class="form-control" name="dataMeans" title="data.means" type="text" />
+				<hr />
+				<div id="form_output" class="wall wall-sm" style="display:none;">
+					<textarea class="form-control" rows="25"></textarea>
+					<p>Add this snippet to <code>data/ext/markers.json.js</code> (alphabetically sorted by the commentId) and create a commit with the description <code id="form_output_commit"></code>.</p>
+				</div>
+				<button id="form_submit" class="btn btn-primary" type="button">Generate snippet</button>
+			</form>
+		</div>
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script src="data/js/createEntry.js"></script>
+	</body>
+</html>
