@@ -23,7 +23,7 @@ function bindInfoWindow(marker, map, infowindow, data) {
 			+ '<div id="content">'
 			+ '<h1 id="firstHeading" class="firstHeading">' + _e(data.data.displayName) + '</h1>'
 			+ '<div id="bodyContent">'
-			+ '<p>This <i>MapVsGeo</i> was made by <a href="https://www.reddit.com/r/MapVsGeo/comments/' + _e(data.reddit.author) + '/" target="_blank">/u/' + _e(data.reddit.author) + '</a>' + ('poster' in data.reddit ? ' and posted by <a href="https://www.reddit.com/r/MapVsGeo/comments/' + _e(data.reddit.poster) + '/" target="_blank">/u/' + _e(data.reddit.poster) + '</a>' : '') + '<br/><br/>'
+			+ '<p>This <i>MapVsGeo</i> was made by <a href="https://www.reddit.com/u/' + _e(data.reddit.author) + '/" target="_blank">/u/' + _e(data.reddit.author) + '</a>' + ('poster' in data.reddit ? ' and posted by <a href="https://www.reddit.com/u/' + _e(data.reddit.poster) + '/" target="_blank">/u/' + _e(data.reddit.poster) + '</a>' : '') + '<br/><br/>'
 			+ '<a class="btn btn-primary" href="https://www.reddit.com/r/MapVsGeo/comments/' + _e(data.reddit.commentsId) + '/" target="_blank">View on Reddit</a></p>'
 			+ '</div>'
 			+ '</div>';
