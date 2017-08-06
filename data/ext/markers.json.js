@@ -38,6 +38,25 @@ var markers = {
 			commentsId: "6k2qd5"
 		}
 	},
+	"6k619f": {
+		data: {
+			displayName: "Philadelphia, USA",
+			means: [
+				"railway"
+			],
+			position: {
+				lat: 40.0049314,
+				lng: -75.2581174
+			}
+		},
+		meta: {
+			adder: "naseweis520"
+		},
+		reddit: {
+			author: "zpepsin",
+			commentsId: "6k619f"
+		}
+	},
 	"6k6tv9": {
 		data: {
 			displayName: "Vienna, Austria",
