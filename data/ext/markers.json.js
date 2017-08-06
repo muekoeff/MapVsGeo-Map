@@ -133,4 +133,24 @@ var markers = {
 			poster: "naseweis520"
 		}
 	},
+	"6s15ic": {
+		data: {
+			displayName: "Paris, France",
+			means: [
+				"metro"
+			],
+			position: {
+				lat: 48.856614,
+				lng: 2.3522219
+			}
+		},
+		meta: {
+			adder: "naseweis520"
+		},
+		reddit: {
+			author: "hlake",
+			commentsId: "6s15ic",
+			poster: "naseweis520"
+		}
+	},
 };
