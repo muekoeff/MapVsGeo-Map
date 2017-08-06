@@ -153,4 +153,24 @@ var markers = {
 			poster: "naseweis520"
 		}
 	},
+	"6s17mv": {
+		data: {
+			displayName: "Madrid, Spain",
+			means: [
+				"metro"
+			],
+			position: {
+				lat: 40.4167754,
+				lng: -3.7037902
+			}
+		},
+		meta: {
+			adder: "naseweis520"
+		},
+		reddit: {
+			author: "--Ninja-",
+			commentsId: "6s17mv",
+			poster: "naseweis520"
+		}
+	},
 };
