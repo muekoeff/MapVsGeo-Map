@@ -193,4 +193,24 @@ var markers = {
 			poster: "naseweis520"
 		}
 	},
+	"6s6uyt": {
+		data: {
+			displayName: "Brussels, Belgium",
+			means: [
+				"subway"
+			],
+			position: {
+				lat: 50.8503463,
+				lng: 4.3517211
+			}
+		},
+		meta: {
+			adder: "naseweis520"
+		},
+		reddit: {
+			author: "MassimoBravo",
+			commentsId: "6s6uyt",
+			poster: "naseweis520"
+		}
+	},
 };
