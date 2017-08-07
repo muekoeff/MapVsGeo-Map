@@ -70,7 +70,7 @@ jQuery(document).ready(function($) {
 			try {
 				var dataBase = data.results[0];
 
-				if(($.inArray("country", dataBase.types) != -1 || $.inArray("locality", dataBase.types) != -1) && $.inArray("political", dataBase.types) != -1) {
+				if($.inArray("political", dataBase.types) != -1) {
 					$("#form_dataPositionLat").val(dataBase.geometry.location.lat);
 					$("#form_dataPositionLng").val(dataBase.geometry.location.lng);
 					$("#form_dataPositionFetcher_result_success em").text("(" + dataBase.formatted_address + ")");
