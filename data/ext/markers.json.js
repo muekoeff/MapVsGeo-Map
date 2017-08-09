@@ -213,4 +213,25 @@ var markers = {
 			poster: "naseweis520"
 		}
 	},
+	"6sk7ix": {
+		data: {
+			displayName: "Antwerp, Belgium",
+			means: [
+				"metro",
+				"tram"
+			],
+			position: {
+				lat: 51.2194475,
+				lng: 4.4024643
+			}
+		},
+		meta: {
+			adder: "naseweis520"
+		},
+		reddit: {
+			author: "CKokken",
+			commentsId: "6sk7ix",
+			poster: "naseweis520"
+		}
+	},
 };
