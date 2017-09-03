@@ -234,4 +234,25 @@ var markers = {
 			poster: "naseweis520"
 		}
 	},
+	"6xnnf8": {
+		data: {
+			displayName: "Kuala Lumpur, Malaysia",
+			means: [
+				"KTM",
+				"LRT",
+				"MRT"
+			],
+			position: {
+				lat: 3.139003,
+				lng: 101.686855
+			}
+		},
+		meta: {
+			adder: "naseweis520"
+		},
+		reddit: {
+			author: "Jing_buang",
+			commentsId: "6xnnf8"
+		}
+	},
 };
