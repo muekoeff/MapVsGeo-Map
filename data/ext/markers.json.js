@@ -255,4 +255,23 @@ var markers = {
 			commentsId: "6xnnf8"
 		}
 	},
+	"6xrpts": {
+		data: {
+			displayName: "Boston, USA",
+			means: [
+				"metro"
+			],
+			position: {
+				lat: 42.3600825,
+				lng: -71.0588801
+			}
+		},
+		meta: {
+			adder: "naseweis520"
+		},
+		reddit: {
+			author: "djbehar",
+			commentsId: "6xrpts"
+		}
+	},
 };
