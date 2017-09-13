@@ -274,4 +274,24 @@ var markers = {
 			commentsId: "6xrpts"
 		}
 	},
+	"6zuozs": {
+		data: {
+			displayName: "Oslo, Norway",
+			means: [
+				"metro"
+			],
+			position: {
+				lat: 59.9138688,
+				lng: 10.7522454
+			}
+		},
+		meta: {
+			adder: "naseweis520"
+		},
+		reddit: {
+			author: "iamthedestroyer",
+			commentsId: "6zuozs",
+			poster: "naseweis520"
+		}
+	},
 };
