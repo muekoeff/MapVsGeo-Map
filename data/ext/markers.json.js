@@ -314,4 +314,24 @@ var markers = {
 			poster: "naseweis520"
 		}
 	},
+	"74ehb0": {
+		data: {
+			displayName: "Tokyo, Japan",
+			means: [
+				"metro"
+			],
+			position: {
+				lat: 35.6894875,
+				lng: 139.6917064
+			}
+		},
+		meta: {
+			adder: "naseweis520"
+		},
+		reddit: {
+			author: "--Ninja-",
+			commentsId: "74ehb0",
+			poster: "naseweis520"
+		}
+	},
 };
