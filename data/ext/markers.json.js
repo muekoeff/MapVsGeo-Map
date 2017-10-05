@@ -294,4 +294,24 @@ var markers = {
 			poster: "naseweis520"
 		}
 	},
+	"74eg55": {
+		data: {
+			displayName: "Washington D.C., USA",
+			means: [
+				"subway"
+			],
+			position: {
+				lat: 38.9071923,
+				lng: -77.0368707
+			}
+		},
+		meta: {
+			adder: "naseweis520"
+		},
+		reddit: {
+			author: "jxmorris12",
+			commentsId: "74eg55",
+			poster: "naseweis520"
+		}
+	},
 };
