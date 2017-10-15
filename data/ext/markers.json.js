@@ -334,4 +334,24 @@ var markers = {
 			poster: "naseweis520"
 		}
 	},
+	"76ji3m": {
+		data: {
+			displayName: "London, United Kingdom",
+			means: [
+				"underground"
+			],
+			position: {
+				lat: 51.5073509,
+				lng: -0.1277583
+			}
+		},
+		meta: {
+			adder: "naseweis520"
+		},
+		reddit: {
+			author: "Pham_Trinli",
+			commentsId: "76ji3m",
+			poster: "naseweis520"
+		}
+	},
 };
