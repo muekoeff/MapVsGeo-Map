@@ -354,4 +354,24 @@ var markers = {
 			poster: "naseweis520"
 		}
 	},
+	"7cfi7q": {
+		data: {
+			displayName: "Guangzhou, China",
+			means: [
+				"metro"
+			],
+			position: {
+				lat: 23.12911,
+				lng: 113.264385
+			}
+		},
+		meta: {
+			adder: "naseweis520"
+		},
+		reddit: {
+			author: "Sv07",
+			commentsId: "7cfi7q",
+			poster: "naseweis520"
+		}
+	},
 };
