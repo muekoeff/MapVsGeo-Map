@@ -3,10 +3,10 @@
 	<head>
 		<meta charset="utf-8">
 		<title>/r/MapVsGeo | Map</title>
-		<link href="data/css/style.css" media="all" rel="stylesheet" />
-		<link href="https://fonts.googleapis.com/css?family=Roboto" media="all" rel="stylesheet" /> 
+		<link rel="stylesheet" href="data/css/style.css" media="all" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" media="all"/>
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" crossorigin="" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" />
 	</head>
-
 	<body>
 		<div id="map"></div>
 		<div id="notes">
@@ -15,9 +15,11 @@
 			<a href="https://github.com/naseweis520/MapVsGeo-Map/blob/master/README.md#how-to-add-an-entry" target="_blank">Add an entry</a> &bull;
 			<a href="https://reddit.com/r/MapVsGeo" target="_blank">/r/MapVsGeo</a>
 		</div>
+		<script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin=""></script>
 		<script src="data/ext/markers.json.js"></script>
-		<script src="data/ext/mapStyles.json.js"></script>
 		<script src="data/js/script.js"></script>
-		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6uJycgrdlNADUPeYhZe1Anz6RAgmQpSE&callback=initMap"></script>
+		<script>
+			init();
+		</script>
 	</body>
 </html>
