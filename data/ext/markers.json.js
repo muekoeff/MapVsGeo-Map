@@ -374,4 +374,23 @@ var markers = {
 			poster: "naseweis520"
 		}
 	},
+	"7e9tpn": {
+		data: {
+			displayName: "Delhi, India",
+			means: [
+				"metro"
+			],
+			position: {
+				lat: 28.7040592,
+				lng: 77.10249019999999
+			}
+		},
+		meta: {
+			adder: "naseweis520"
+		},
+		reddit: {
+			author: "photosutra",
+			commentsId: "7e9tpn"
+		}
+	},
 };
