@@ -473,4 +473,24 @@ var markers = {
 			poster: "naseweis520"
 		}
 	},
+	"7znxqu": {
+		data: {
+			displayName: "Rotterdam, Netherlands",
+			means: [
+				"subway"
+			],
+			position: {
+				lat: 51.9244201,
+				lng: 4.4777326
+			}
+		},
+		meta: {
+			adder: "naseweis520"
+		},
+		reddit: {
+			author: "Ghorich",
+			commentsId: "7znxqu",
+			poster: "naseweis520"
+		}
+	},
 };
