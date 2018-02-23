@@ -453,4 +453,24 @@ var markers = {
 			poster: "naseweis520"
 		}
 	},
+	"7znx3g": {
+		data: {
+			displayName: "Warsaw, Poland",
+			means: [
+				"subway"
+			],
+			position: {
+				lat: 52.2296756,
+				lng: 21.0122287
+			}
+		},
+		meta: {
+			adder: "naseweis520"
+		},
+		reddit: {
+			author: "milicjant",
+			commentsId: "7znx3g",
+			poster: "naseweis520"
+		}
+	},
 };
