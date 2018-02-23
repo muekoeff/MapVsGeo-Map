@@ -413,4 +413,24 @@ var markers = {
 			poster: "naseweis520"
 		}
 	},
+	"7znrxp": {
+		data: {
+			displayName: "Frankfurt am Main, Germany",
+			means: [
+				"subway"
+			],
+			position: {
+				lat: 50.1109221,
+				lng: 8.6821267
+			}
+		},
+		meta: {
+			adder: "naseweis520"
+		},
+		reddit: {
+			author: "tadabutcha",
+			commentsId: "7znrxp",
+			poster: "naseweis520"
+		}
+	},
 };
