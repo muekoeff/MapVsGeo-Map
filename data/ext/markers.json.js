@@ -433,4 +433,24 @@ var markers = {
 			poster: "naseweis520"
 		}
 	},
+	"7znukx": {
+		data: {
+			displayName: "Montreal, Canada",
+			means: [
+				"metro"
+			],
+			position: {
+				lat: 45.5016889,
+				lng: -73.567256
+			}
+		},
+		meta: {
+			adder: "naseweis520"
+		},
+		reddit: {
+			author: "weilian82",
+			commentsId: "7znukx",
+			poster: "naseweis520"
+		}
+	},
 };
