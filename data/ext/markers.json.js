@@ -493,4 +493,24 @@ var markers = {
 			poster: "naseweis520"
 		}
 	},
+	"8009it": {
+		data: {
+			displayName: "Prague, Czech Republic",
+			means: [
+				"metro"
+			],
+			position: {
+				lat: 50.0755381,
+				lng: 14.4378005
+			}
+		},
+		meta: {
+			adder: "naseweis520"
+		},
+		reddit: {
+			author: "Swordslayer",
+			commentsId: "8009it",
+			poster: "naseweis520"
+		}
+	},
 };
