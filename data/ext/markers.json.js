@@ -513,4 +513,24 @@ var markers = {
 			poster: "naseweis520"
 		}
 	},
+	"8fyl2f": {
+		data: {
+			displayName: "Atlanta, USA",
+			means: [
+				"subway"
+			],
+			position: {
+				lat: 33.7489954,
+				lng: -84.3879824
+			}
+		},
+		meta: {
+			adder: "naseweis520"
+		},
+		reddit: {
+			author: "D3signAllTheThingsOC",
+			commentsId: "8fyl2f",
+			poster: "naseweis520"
+		}
+	},
 };
