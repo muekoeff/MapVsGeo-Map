@@ -553,4 +553,24 @@ var markers = {
 			poster: "naseweis520"
 		}
 	},
+	"8het1r": {
+		data: {
+			displayName: "Washington, USA",
+			means: [
+				"metro"
+			],
+			position: {
+				lat: 47.7510741,
+				lng: -120.7401385
+			}
+		},
+		meta: {
+			adder: "naseweis520"
+		},
+		reddit: {
+			author: "stupidgit",
+			commentsId: "8het1r",
+			poster: "naseweis520"
+		}
+	},
 };
