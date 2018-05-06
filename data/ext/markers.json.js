@@ -533,4 +533,24 @@ var markers = {
 			poster: "naseweis520"
 		}
 	},
+	"8heset": {
+		data: {
+			displayName: "Pune, India",
+			means: [
+				"metro"
+			],
+			position: {
+				lat: 18.5204303,
+				lng: 73.8567437
+			}
+		},
+		meta: {
+			adder: "naseweis520"
+		},
+		reddit: {
+			author: "Souruly",
+			commentsId: "8heset",
+			poster: "naseweis520"
+		}
+	},
 };
