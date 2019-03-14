@@ -573,4 +573,25 @@ var markers = {
 			poster: "naseweis520"
 		}
 	},
+	"b16atx": {
+		data: {
+			displayName: "Munich, Germany",
+			means: [
+				"s-bahn",
+				"u-bahn"
+			],
+			position: {
+				lat: 48.1359,
+				lng: 11.5734
+			}
+		},
+		meta: {
+			adder: "naseweis520"
+		},
+		reddit: {
+			author: "zuegnerd",
+			commentsId: "b16atx",
+			poster: "naseweis520"
+		}
+	},
 };
