@@ -594,4 +594,25 @@ var markers = {
 			poster: "naseweis520"
 		}
 	},
+	"b172tl": {
+		data: {
+			displayName: "Hamburg, Germany",
+			means: [
+				"s-bahn",
+				"u-bahn"
+			],
+			position: {
+				lat: 53.5505,
+				lng: 9.8286
+			}
+		},
+		meta: {
+			adder: "naseweis520"
+		},
+		reddit: {
+			author: "MirCore",
+			commentsId: "b172tl",
+			poster: "naseweis520"
+		}
+	},
 };
