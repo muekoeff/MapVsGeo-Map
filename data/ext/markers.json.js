@@ -615,4 +615,24 @@ var markers = {
 			poster: "naseweis520"
 		}
 	},
+	"b174z4": {
+		data: {
+			displayName: "Zagreb, Croatia",
+			means: [
+				"tram"
+			],
+			position: {
+				lat: 45.8130,
+				lng: 15.9755
+			}
+		},
+		meta: {
+			adder: "naseweis520"
+		},
+		reddit: {
+			author: "DiggerK2",
+			commentsId: "b174z4",
+			poster: "naseweis520"
+		}
+	},
 };
