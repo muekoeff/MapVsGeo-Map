@@ -1,12 +1,12 @@
 jQuery(document).ready(function($) {
 	$("#form_redditUrl_button").click(function() {
+		// If domain Reddit
 		if(validateUrl($("#form_redditUrl").val())
 			&& $("#form_redditUrl").val().toLowerCase().match(/https?:\/\/([^.]*\.)?reddit\.com\//)) {
 
-
+			// If subreddit MapVsGeo
 			if($("#form_redditUrl").val().toLowerCase().match(/https?:\/\/([^.]*\.)?reddit\.com\/r\/mapvsgeo\//)) {
-				$("#form_redditUrl").prop("disabled", true);
-				$("#form_redditUrl_button").prop("disabled", true);
+				resetForm(false);
 				$("#form_redditUrl_result").hide();
 	
 				$.ajax({
@@ -14,8 +14,9 @@ jQuery(document).ready(function($) {
 					type: "get",
 					url: $("#form_redditUrl").val() + ".json"
 				}).always(function() {
-					$("#form_redditUrl").prop("disabled", false);
-					$("#form_redditUrl_button").prop("disabled", false);
+					if($("#form_redditUrlOriginal").val().length === 0) {
+						resetForm(true);
+					}
 				}).done(function(data) {
 					console.debug(data);
 					try {
@@ -26,8 +27,36 @@ jQuery(document).ready(function($) {
 						$("#form_redditCommentId").val(dataBase.id);
 	
 						$("#form_dataDisplayName").val(dataBase.title);
-	
-						$("#form_redditUrl_result").attr("class", "alert alert-success").text("Data successfully fetched").fadeIn();
+						
+						if($("#form_redditUrlOriginal").val().length === 0) {
+							$("#form_redditUrl_result").attr("class", "alert alert-success").text("Data successfully fetched").fadeIn();
+						} else {
+							$.ajax({
+								dataType: "json",
+								type: "get",
+								url: $("#form_redditUrlOriginal").val() + ".json"
+							}).always(function() {
+								resetForm(true);
+							}).done(function(data) {
+								console.debug(data);
+								try {
+									var dataBaseOriginal = data[0].data.children[0].data;
+									$("#form_redditCommentIdOriginal").val(dataBaseOriginal.id);
+									if(dataBaseOriginal.author == dataBase.author) {
+										$("#form_redditPosterIsAuthor").prop("checked", true);
+										$("#form_redditAuthor").prop("disabled", true);
+									} else {
+										$("#form_redditPosterIsAuthor").prop("checked", false);
+										$("#form_redditAuthor").prop("disabled", false);
+										$("#form_redditAuthor").val(dataBaseOriginal.author);
+									}
+								} catch(ex) {
+									$("#form_redditUrl_result").attr("class", "alert alert-danger").html("Unable to request data <small>(Invalid answer)</small>").fadeIn();
+								}
+							}).fail(function(data) {
+								$("#form_redditUrl_result").attr("class", "alert alert-danger").html("Unable to request data <small>(Request failed)</small>").fadeIn();
+							});
+						}
 					} catch(ex) {
 						$("#form_redditUrl_result").attr("class", "alert alert-danger").html("Unable to request data <small>(Invalid answer)</small>").fadeIn();
 					}
@@ -40,7 +69,12 @@ jQuery(document).ready(function($) {
 		} else {
 			$("#form_redditUrl_result").attr("class", "alert alert-danger").text("Invalid Reddit URL").fadeIn();
 		}
-			
+		
+		function resetForm(state) {
+			$("#form_redditUrl").prop("disabled", !state);
+			$("#form_redditUrl_button").prop("disabled", !state);
+			$("#form_redditUrlOriginal").prop("disabled", !state);
+		}
 	});
 
 	$("#form_redditPosterIsAuthor").change(function() {
@@ -108,10 +142,12 @@ jQuery(document).ready(function($) {
 			adder: "` + _e($("#form_metaAdder").val()) + `"
 		},
 		reddit: {
-			author: "` + _e( ($("#form_redditPosterIsAuthor").is(":checked") ? $("#form_redditPoster").val() : $("#form_redditAuthor").val()) ) + `",
-			commentsId: "` + _e($("#form_redditCommentId").val()) + `"` + "" +
-(!$("#form_redditPosterIsAuthor").is(":checked") ? `,\n			poster: "` + _e($("#form_redditPoster").val()) + `"` : "") +
-`\n		}
+			author: "${_e($("#form_redditPosterIsAuthor").is(":checked") ? $("#form_redditPoster").val() : $("#form_redditAuthor").val())}",
+			commentsId: "${_e($("#form_redditCommentId").val())}",`
++ (!$("#form_redditPosterIsAuthor").is(":checked") ? `\n			poster: "${_e($("#form_redditPoster").val())}",` : "")
++ ($("#form_redditCommentIdOriginal").val().length > 0 ? `\n			commentsIdOriginal: "${_e($("#form_redditCommentIdOriginal").val())}",` : "")
++ `
+		}
 	},`;
 
 		$("#form_output textarea").val(output);

@@ -36,19 +36,18 @@
 					<div class="align-items-start d-flex flex-row justify-content-between mt-4">
 						<div class="mr-4" style="flex-grow:1">
 							<h3>Reddit</h3>
-							<div class="row">
-								<div class="col-md-6">
-									<label for="form_redditPoster">Poster</label>
-									<input id="form_redditPoster" class="form-control" name="redditPoster" title="reddit.poster" type="text" />
-									<input id="form_redditPosterIsAuthor" name="redditPosterIsAuthor" type="checkbox" /> <label for="form_redditPosterIsAuthor">Poster is OC-creator and author</label>
-								</div>
-								<div class="col-md-6">
-									<label for="form_redditAuthor">Author</label>
-									<input id="form_redditAuthor" class="form-control" name="redditAuthor" title="reddit.author" type="text" />
-								</div>
+							<label for="form_redditPoster">Poster</label>
+							<input id="form_redditPoster" class="form-control" name="redditPoster" title="reddit.poster" type="text" />
+							<div class="input-group">
+								<input id="form_redditPosterIsAuthor" class="mr-2" name="redditPosterIsAuthor" type="checkbox" /> <label for="form_redditPosterIsAuthor">Poster is OC-creator and author</label>
 							</div>
-							<label for="form_redditCommentId">CommentId</label>
+							<label for="form_redditAuthor">Author</label>
+							<input id="form_redditAuthor" class="form-control" name="redditAuthor" title="reddit.author" type="text" />
+							<label for="form_redditCommentId">CommentId on /r/MapVsGeo</label>
 							<input id="form_redditCommentId" class="form-control" name="redditCommentId" title="reddit.commentId" type="text" />
+							<p class="mt-4">If this MapVsGeo has already been posted on another subreddit you can additionally specify its commit-ID here:</p>
+							<label for="form_redditCommentIdOriginal">CommentId on original subreddit</label>
+							<input id="form_redditCommentIdOriginal" class="form-control" name="redditCommentId" title="reddit.commentsIdOriginal" type="text" />
 						</div>
 
 						<div class="card bg-light mb-2 w-25" style="float:right">
@@ -57,13 +56,13 @@
 								<div class="card-text">
 									<div id="form_redditUrl_result" role="alert" style="display:none"></div>
 									<p>Some data can be automatically retrieved via the Reddit API. This step is optional but can be quite handy at times.</p>
-									<label for="form_redditUrl">Reddit URL</label>
-									<div class="input-group">
-										<input id="form_redditUrl" class="form-control" name="redditUrl" type="url" />
-										<span class="input-group-btn ml-2">
-											<button id="form_redditUrl_button" class="btn btn-outline-info" type="button">Request</button>
-										</span>
-									</div>
+									<label for="form_redditUrl">Reddit URL on /r/MapVsGeo</label>
+									<input id="form_redditUrl" class="form-control" name="redditUrl" type="url" />
+
+									<p>If there's also an "original" post on another subreddit:</p>
+									<label for="form_redditUrlOriginal">Original Reddit URL</label>
+									<input id="form_redditUrlOriginal" class="form-control" name="redditUrlOriginal" type="url" />
+									<button id="form_redditUrl_button" class="btn btn-outline-info" type="button">Request</button>
 								</div>
 							</div>
 						</div>
