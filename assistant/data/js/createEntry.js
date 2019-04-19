@@ -1,92 +1,90 @@
 jQuery(document).ready(function($) {
 	$("#form_redditUrl_button").click(function() {
 		if(validateUrl($("#form_redditUrl").val())
-			&& ($("#form_redditUrl").val().startsWith("http://reddit.com/") || $("#form_redditUrl").val().startsWith("http://www.reddit.com/")
-				|| $("#form_redditUrl").val().startsWith("https://reddit.com/") || $("#form_redditUrl").val().startsWith("https://www.reddit.com/"))) {
-			$("#form_redditUrl").prop("disabled", true);
-			$("#form_redditUrl_addon i").removeClass("glyphicon-option-horizontal glyphicon-remove").addClass("glyphicon-refresh");
-			$("#form_redditUrl_button").prop("disabled", true);
-			$("#form_redditUrl_result_error").hide();
-			$("#form_redditUrl_result_success").hide();
-			$("#form_redditUrl_result_invalid").hide();
+			&& $("#form_redditUrl").val().toLowerCase().match(/https?:\/\/([^.]*\.)?reddit\.com\//)) {
 
-			$.ajax({
-				dataType: "json",
-				type: "get",
-				url: $("#form_redditUrl").val() + ".json"
-			}).always(function() {
-				$("#form_redditUrl").prop("disabled", false);
-				$("#form_redditUrl_addon i").removeClass("glyphicon-refresh").addClass("glyphicon-option-horizontal");
-				$("#form_redditUrl_button").prop("disabled", false);
-			}).done(function(data) {
-				console.log(data);
-				try {
-					var dataBase = data[0].data.children[0].data;
-					$("#form_redditPoster").val(dataBase.author);
-					$("#form_redditPosterIsAuthor").prop("checked", true);
-					$("#form_redditAuthor").prop("disabled", true);
-					$("#form_redditCommentId").val(dataBase.id);
 
-					$("#form_dataDisplayName").val(dataBase.title);
-
-					$("#form_redditUrl_result_success").fadeIn();
-				} catch(ex) {
-					$("#form_redditUrl_addon i").removeClass("glyphicon-option-horizontal").addClass("glyphicon-remove");
-					$("#form_redditUrl_result_error").fadeIn();
-					console.log("Unable to read data");
-				}
-			}).fail(function(data) {
-				$("#form_redditUrl_addon i").removeClass("glyphicon-option-horizontal").addClass("glyphicon-remove");
-				$("#form_redditUrl_result_error").fadeIn();
-			});
+			if($("#form_redditUrl").val().toLowerCase().match(/https?:\/\/([^.]*\.)?reddit\.com\/r\/mapvsgeo\//)) {
+				$("#form_redditUrl").prop("disabled", true);
+				$("#form_redditUrl_button").prop("disabled", true);
+				$("#form_redditUrl_result").hide();
+	
+				$.ajax({
+					dataType: "json",
+					type: "get",
+					url: $("#form_redditUrl").val() + ".json"
+				}).always(function() {
+					$("#form_redditUrl").prop("disabled", false);
+					$("#form_redditUrl_button").prop("disabled", false);
+				}).done(function(data) {
+					console.debug(data);
+					try {
+						var dataBase = data[0].data.children[0].data;
+						$("#form_redditPoster").val(dataBase.author);
+						$("#form_redditPosterIsAuthor").prop("checked", true);
+						$("#form_redditAuthor").prop("disabled", true);
+						$("#form_redditCommentId").val(dataBase.id);
+	
+						$("#form_dataDisplayName").val(dataBase.title);
+	
+						$("#form_redditUrl_result").attr("class", "alert alert-success").text("Data successfully fetched").fadeIn();
+					} catch(ex) {
+						$("#form_redditUrl_result").attr("class", "alert alert-danger").html("Unable to request data <small>(Invalid answer)</small>").fadeIn();
+					}
+				}).fail(function(data) {
+					$("#form_redditUrl_result").attr("class", "alert alert-danger").html("Unable to request data <small>(Request failed)</small>").fadeIn();
+				});
+			} else {
+				$("#form_redditUrl_result").attr("class", "alert alert-danger").text("We only accept posts from /r/MapVsGeo").fadeIn();
+			}
 		} else {
-			$("#form_redditUrl_result_invalid").fadeIn();
+			$("#form_redditUrl_result").attr("class", "alert alert-danger").text("Invalid Reddit URL").fadeIn();
 		}
+			
 	});
 
 	$("#form_redditPosterIsAuthor").change(function() {
-		console.log(this.checked);
-		if(this.checked) {
-			$("#form_redditAuthor").prop("disabled", true);
-		} else {
-			$("#form_redditAuthor").prop("disabled", false);
-		}
+		$("#form_redditAuthor").prop("disabled", this.checked);
 	});
 
 	$("#form_dataPositionFetcher_button").click(function() {
 		$("#form_dataPositionFetcher_button").prop("disabled", true);
-		$("#form_dataPositionFetcher_result_error").hide();
-		$("#form_dataPositionFetcher_result_success").hide();
-		$("#form_dataPositionFetcher_result_invalid").hide();
+		$("#form_dataPositionFetcher_result").hide();
 
-		$.ajax({
-			dataType: "json",
-			type: "get",
-			url: "https://maps.google.com/maps/api/geocode/json?address=" + encodeURIComponent($("#form_dataDisplayName").val())
-		}).always(function() {
-			$("#form_dataPositionFetcher_button").prop("disabled", false);
-		}).done(function(data) {
-			console.log(data);
-			try {
-				var dataBase = data.results[0];
-
-				if($.inArray("political", dataBase.types) != -1) {
-					$("#form_dataPositionLat").val(dataBase.geometry.location.lat);
-					$("#form_dataPositionLng").val(dataBase.geometry.location.lng);
-					$("#form_dataPositionFetcher_result_success em").text("(" + dataBase.formatted_address + ")");
-					$("#form_dataPositionFetcher_result_success").fadeIn();
-				} else {
-					$("#form_dataPositionFetcher_result_invalid em").text("(Possible wrong match - doesn't have required tags | " + dataBase.formatted_address + ", lat:" + dataBase.geometry.location.lat + ", lng:" + dataBase.geometry.location.lng + ")");
-					$("#form_dataPositionFetcher_result_invalid").fadeIn();
+		if($("#form_dataDisplayName").val().length > 0) {
+			$.ajax({
+				data: {
+					format: "json",
+					q: $("#form_dataDisplayName").val()
+				},
+				dataType: "json",
+				type: "get",
+				url: "https://nominatim.openstreetmap.org/search"
+			}).always(function() {
+				$("#form_dataPositionFetcher_button").prop("disabled", false);
+			}).done(function(data) {
+				console.debug(data);
+				try {
+					if(data.length > 0) {
+						$.each(data, function(i, val) {
+							if(val.type == "administrative" || val.type == "city" || val.type == "island") {
+								$("#form_dataPositionLat").val(val.lat);
+								$("#form_dataPositionLng").val(val.lon);
+								$("#form_dataPositionFetcher_result").attr("class", "alert alert-success").html(`Location found (<a href="https://osm.org/?mlat=${val.lat}&mlon=${val.lon}" target="_blank" rel="noopener">${_e(val.display_name)})</a>`).fadeIn();
+							}
+						});
+					} else {
+						$("#form_dataPositionFetcher_result").attr("class", "alert alert-danger").text(`No locations found`).fadeIn();
+					}
+				} catch(ex) {
+					$("#form_dataPositionFetcher_result").attr("class", "alert alert-danger").text(`Unable to request coordinates (Invalid answer)`).fadeIn();
 				}
-			} catch(ex) {
-				$("#form_dataPositionFetcher_result_invalid em").text("");
-				$("#form_dataPositionFetcher_result_invalid").fadeIn();
-				console.log("Unable to read data");
-			}
-		}).fail(function(data) {
-			$("#form_dataPositionFetcher_result_error").fadeIn();
-		});
+			}).fail(function(data) {
+				$("#form_dataPositionFetcher_result").attr("class", "alert alert-danger").text(`Unable to request coordinates (Request failed)`).fadeIn();
+			});
+		} else {
+			$("#form_dataPositionFetcher_result").attr("class", "alert alert-danger").text(`Please enter a location to look for`).fadeIn();
+		}		
 	});
 
 	$("#form_submit").click(function() {
