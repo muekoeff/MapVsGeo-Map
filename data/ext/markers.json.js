@@ -635,4 +635,23 @@ var markers = {
 			poster: "naseweis520"
 		}
 	},
+	"bb6jhq": {
+		data: {
+			displayName: "Stockholm, Sweden",
+			means: [
+				"metro"
+			],
+			position: {
+				lat: 59.3255,
+				lng: 18.0708
+			}
+		},
+		meta: {
+			adder: "naseweis520"
+		},
+		reddit: {
+			author: "Axelv",
+			commentsId: "bb6jhq"
+		}
+	},
 };
