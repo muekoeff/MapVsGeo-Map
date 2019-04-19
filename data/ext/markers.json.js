@@ -1,4 +1,23 @@
 var markers = {
+	"6cbjki": {
+		data: {
+			displayName: "Singapore",
+			means: [
+				"metro"
+			],
+			position: {
+				lat: 1.3521,
+				lng: 103.8198
+			}
+		},
+		meta: {
+			adder: "Gipsyking79"
+		},
+		reddit: {
+			author: "wrcyn",
+			commentsId: "6cbjki"
+		}
+	},
 	"6ilw12": {
 		data: {
 			displayName: "Berlin, Germany",
