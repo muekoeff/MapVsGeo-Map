@@ -654,4 +654,24 @@ var markers = {
 			commentsId: "bb6jhq"
 		}
 	},
+	"bexx7t": {
+		data: {
+			displayName: "Sydney, Australia",
+			means: [
+				"train"
+			],
+			position: {
+				lat: -33.8888845,
+				lng: 151.204926730014
+			}
+		},
+		meta: {
+			adder: "naseweis520"
+		},
+		reddit: {
+			author: "TheGaminja",
+			commentsId: "bexx7t",
+			poster: "schroeder8"
+		}
+	},
 };
