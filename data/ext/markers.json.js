@@ -654,6 +654,27 @@ var markers = {
 			commentsId: "bb6jhq"
 		}
 	},
+	"bewvq3": {
+		data: {
+			displayName: "Singapore",
+			means: [
+				"mrt"
+			],
+			position: {
+				lat: 1.357107,
+				lng: 103.8194992
+			}
+		},
+		meta: {
+			adder: "naseweis520"
+		},
+		reddit: {
+			author: "wrcyn",
+			commentsId: "bewvq3",
+			poster: "jhudog",
+			commentsIdOriginal: "6cbjki",
+		}
+	},
 	"bexx7t": {
 		data: {
 			displayName: "Sydney, Australia",
