@@ -21,14 +21,13 @@ function _e(unsafe) {
  * @return	string  Generated HTML
  */
 function getPopup(data) {
-	return '<style></style>' +
-		'<div id="content">' +
-		'<h1 id="firstHeading" class="firstHeading">' + _e(data.data.displayName) + '</h1>' +
-		'<div id="bodyContent">' +
-		'<p>This <i>MapVsGeo</i> was made by <a href="https://www.reddit.com/u/' + _e(data.reddit.author) + '/" target="_blank">/u/' + _e(data.reddit.author) + '</a>' + ('poster' in data.reddit ? ' and posted by <a href="https://www.reddit.com/u/' + _e(data.reddit.poster) + '/" target="_blank">/u/' + _e(data.reddit.poster) + '</a>' : '') + '<br/><br/>' +
-		'<a class="btn btn-primary" href="https://www.reddit.com/r/MapVsGeo/comments/' + _e(data.reddit.commentsId) + '/" target="_blank">View on Reddit</a></p>' +
-		'</div>' +
-		'</div>'
+	return `<div id="content">
+		<h1 id="firstHeading" class="firstHeading">${_e(data.data.displayName)}</h1>
+		<div id="bodyContent">
+		<p>This MapVsGeo was made by <a href="https://www.reddit.com/u/${_e(data.reddit.author)}/" target="_blank">/u/${_e(data.reddit.author)}</a>${"poster" in data.reddit ? ` and posted by <a href="https://www.reddit.com/u/${_e(data.reddit.poster)}/" target="_blank">/u/${_e(data.reddit.poster)}</a>` : ''}<br/><br/>
+		<a class="btn btn-primary" href="https://www.reddit.com/comments/${_e(data.reddit.commentsId)}/" target="_blank">View on Reddit</a></p>
+		</div>
+		</div>`;
 }
 
 function init() {
