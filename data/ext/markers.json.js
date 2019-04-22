@@ -695,4 +695,25 @@ var markers = {
 			poster: "schroeder8"
 		}
 	},
+	"bfaz9w": {
+		data: {
+			displayName: "Melbourne, Australia",
+			means: [
+				"train"
+			],
+			position: {
+				lat: -37.8142176,
+				lng: 144.9631608
+			}
+		},
+		meta: {
+			adder: "naseweis520"
+		},
+		reddit: {
+			author: "megalomega",
+			commentsId: "bfaz9w",
+			poster: "Talenin2014",
+			commentsIdOriginal: "bf6ove",
+		}
+	},
 };
