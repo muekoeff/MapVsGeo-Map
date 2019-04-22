@@ -635,6 +635,29 @@ var markers = {
 			poster: "naseweis520"
 		}
 	},
+	"b8ripj": {
+		data: {
+			displayName: "Medellín, Colombia",
+			means: [
+				"metro",
+				"BRT",
+				"tram",
+				"cable car"
+			],
+			position: {
+				lat: 6.244747,
+				lng: -75.574828
+			}
+		},
+		meta: {
+			adder: "naseweis520"
+		},
+		reddit: {
+			author: "soy23",
+			commentsId: "b8ripj",
+			commentsIdOriginal: "bf6ove",
+		}
+	},
 	"bb6jhq": {
 		data: {
 			displayName: "Stockholm, Sweden",
