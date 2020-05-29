@@ -1,112 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>/r/MapVsGeo | Add an entry</title>
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	</head>
+<head>
+<meta charset="utf-8">
+<title>/r/MapVsGeo | Add an entry</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🗺️</text></svg>" />
+</head>
 
-	<body class="d-flex flex-column h-100">
-		<header>
-			<nav class="navbar navbar-expand-md navbar-dark bg-dark">
-				<a class="navbar-brand" href="https://reddit.com/r/MapVsGeo">/r/MapVsGeo</a>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse" id="navbarCollapse">
-					<ul class="navbar-nav mr-auto">
-						<li class="nav-item">
-							<a class="nav-link" href="https://github.com/nw520/MapVsGeo-Map/">GitHub</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="../index.html">Back to the map</a>
-						</li>
-					</ul>
+<body class="d-flex flex-column h-100">
+<header>
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+		<a class="navbar-brand" href="https://reddit.com/r/MapVsGeo">/r/MapVsGeo</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarCollapse">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="https://github.com/muekoeff/mapvsgeo-map/">GitHub</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../index.html">Back to the map</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+</header>
+<main role="main">
+	<div class="container mb-5 mt-5">
+		<div class="page-header">
+			<h1>Add an entry</h1>
+		</div>
+		<form>
+			<h3>Meta</h3>
+			<label for="form_metaAdder">Your Reddit username</label>
+			<input id="form_metaAdder" class="form-control" name="metaAdder" type="text" />
+			
+			<div class="align-items-start d-flex flex-row justify-content-between mt-4">
+				<div class="mr-4" style="flex-grow:1">
+					<h3>Reddit</h3>
+					<label for="form_redditPoster">Poster</label>
+					<input id="form_redditPoster" class="form-control" name="redditPoster" title="reddit.poster" type="text" />
+					<div class="input-group">
+						<input id="form_redditPosterIsAuthor" class="mr-2" name="redditPosterIsAuthor" type="checkbox" /> <label for="form_redditPosterIsAuthor">Poster is OC-creator and author</label>
+					</div>
+					<label for="form_redditAuthor">Author</label>
+					<input id="form_redditAuthor" class="form-control" name="redditAuthor" title="reddit.author" type="text" />
+					<label for="form_redditCommentId">CommentId on /r/MapVsGeo</label>
+					<input id="form_redditCommentId" class="form-control" name="redditCommentId" title="reddit.commentId" type="text" />
+					<p class="mt-4">If this MapVsGeo has already been posted on another subreddit you can additionally specify its commit-ID here:</p>
+					<label for="form_redditCommentIdOriginal">CommentId on original subreddit</label>
+					<input id="form_redditCommentIdOriginal" class="form-control" name="redditCommentId" title="reddit.commentsIdOriginal" type="text" />
 				</div>
-			</nav>
-		</header>
-		<main role="main">
-			<div class="container mb-5 mt-5">
-				<div class="page-header">
-					<h1>Add an entry</h1>
-				</div>
-				<form>
-					<h3>Meta</h3>
-					<label for="form_metaAdder">Your Reddit username</label>
-					<input id="form_metaAdder" class="form-control" name="metaAdder" type="text" />
-					
-					<div class="align-items-start d-flex flex-row justify-content-between mt-4">
-						<div class="mr-4" style="flex-grow:1">
-							<h3>Reddit</h3>
-							<label for="form_redditPoster">Poster</label>
-							<input id="form_redditPoster" class="form-control" name="redditPoster" title="reddit.poster" type="text" />
-							<div class="input-group">
-								<input id="form_redditPosterIsAuthor" class="mr-2" name="redditPosterIsAuthor" type="checkbox" /> <label for="form_redditPosterIsAuthor">Poster is OC-creator and author</label>
-							</div>
-							<label for="form_redditAuthor">Author</label>
-							<input id="form_redditAuthor" class="form-control" name="redditAuthor" title="reddit.author" type="text" />
-							<label for="form_redditCommentId">CommentId on /r/MapVsGeo</label>
-							<input id="form_redditCommentId" class="form-control" name="redditCommentId" title="reddit.commentId" type="text" />
-							<p class="mt-4">If this MapVsGeo has already been posted on another subreddit you can additionally specify its commit-ID here:</p>
-							<label for="form_redditCommentIdOriginal">CommentId on original subreddit</label>
-							<input id="form_redditCommentIdOriginal" class="form-control" name="redditCommentId" title="reddit.commentsIdOriginal" type="text" />
-						</div>
 
-						<div class="card bg-light mb-2 w-25" style="float:right">
-							<div class="card-header">Assistant</div>
-							<div class="card-body">
-								<div class="card-text">
-									<div id="form_redditUrl_result" role="alert" style="display:none"></div>
-									<p>Some data can be automatically retrieved via the Reddit API. This step is optional but can be quite handy at times.</p>
-									<label for="form_redditUrl">Reddit URL on /r/MapVsGeo</label>
-									<input id="form_redditUrl" class="form-control" name="redditUrl" type="url" />
+				<div class="card bg-light mb-2 w-25" style="float:right">
+					<div class="card-header">Assistant</div>
+					<div class="card-body">
+						<div class="card-text">
+							<div id="form_redditUrl_result" role="alert" style="display:none"></div>
+							<p>Some data can be automatically retrieved via the Reddit API. This step is optional but can be quite handy at times.</p>
+							<label for="form_redditUrl">Reddit URL on /r/MapVsGeo</label>
+							<input id="form_redditUrl" class="form-control" name="redditUrl" type="url" />
 
-									<p>If there's also an "original" post on another subreddit:</p>
-									<label for="form_redditUrlOriginal">Original Reddit URL</label>
-									<input id="form_redditUrlOriginal" class="form-control" name="redditUrlOriginal" type="url" />
-									<button id="form_redditUrl_button" class="btn btn-outline-info" type="button">Request</button>
-								</div>
-							</div>
+							<p>If there's also an "original" post on another subreddit:</p>
+							<label for="form_redditUrlOriginal">Original Reddit URL</label>
+							<input id="form_redditUrlOriginal" class="form-control" name="redditUrlOriginal" type="url" />
+							<button id="form_redditUrl_button" class="btn btn-outline-info" type="button">Request</button>
 						</div>
 					</div>
-
-					<div class="mt-4">
-						<h3>Data</h3>
-						<label for="form_dataDisplayName">Human-readable location / Display name &dash; <em>(City, Country)</em></label>
-						<input id="form_dataDisplayName" class="form-control" name="dataDisplayName" title="data.displayName" type="text" />
-						<div class="align-items-start d-flex flex-row justify-content-between mt-2">
-							<div class="mr-4" style="flex-grow:1">
-								<label for="form_dataPositionLat">Latitude</label>
-								<input id="form_dataPositionLat" class="form-control" name="dataPositionLat" title="data.position.lat" type="text" />
-								<label for="form_dataPositionLng">Longitude</label>
-								<input id="form_dataPositionLng" class="form-control" name="dataPositionLng" title="data.position.lng" type="text" />
-							</div>
-							<div class="card bg-light mb-2 w-25" style="float:right">
-								<div class="card-header">Assistant</div>
-								<div class="card-body">
-									<div class="card-text">
-										<div id="form_dataPositionFetcher_result" role="alert" style="display:none"></div>
-										<p>This assistant can try to automatically request the coordinates using <a href="https://nominatim.openstreetmap.org/" target="_blank" rel="noopener">Nominatim</a>.</p>
-										<button id="form_dataPositionFetcher_button" class="btn btn-outline-info" type="button">Request</button>
-									</div>
-								</div>		
-							</div>
-						</div>
-						<label for="form_dataMeans">Means of transportation &dash; <em>(separate with comma <em>,</em> and <strong>only</strong> with a comma - so no space)</em></label>
-						<input id="form_dataMeans" class="form-control" name="dataMeans" title="data.means" type="text" />
-						<hr />
-						<div id="form_output" class="wall wall-sm" style="display:none;">
-							<textarea class="form-control" rows="25"></textarea>
-							<p>Add this snippet to <code>data/ext/markers.json.js</code> (alphabetically sorted by the commentId) and create a commit with the description <code id="form_output_commit"></code>.</p>
-						</div>
-					</div>
-					
-					<button id="form_submit" class="btn btn-primary" type="button">Generate snippet</button>
-				</form>
+				</div>
 			</div>
-		</main>
-		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-		<script src="data/js/createEntry.js"></script>
-	</body>
+
+			<div class="mt-4">
+				<h3>Data</h3>
+				<label for="form_dataDisplayName">Human-readable location / Display name &dash; <em>(City, Country)</em></label>
+				<input id="form_dataDisplayName" class="form-control" name="dataDisplayName" title="data.displayName" type="text" />
+				<div class="align-items-start d-flex flex-row justify-content-between mt-2">
+					<div class="mr-4" style="flex-grow:1">
+						<label for="form_dataPositionLat">Latitude</label>
+						<input id="form_dataPositionLat" class="form-control" name="dataPositionLat" title="data.position.lat" type="text" />
+						<label for="form_dataPositionLng">Longitude</label>
+						<input id="form_dataPositionLng" class="form-control" name="dataPositionLng" title="data.position.lng" type="text" />
+					</div>
+					<div class="card bg-light mb-2 w-25" style="float:right">
+						<div class="card-header">Assistant</div>
+						<div class="card-body">
+							<div class="card-text">
+								<div id="form_dataPositionFetcher_result" role="alert" style="display:none"></div>
+								<p>This assistant can try to automatically request the coordinates using <a href="https://nominatim.openstreetmap.org/" target="_blank" rel="noopener">Nominatim</a>.</p>
+								<button id="form_dataPositionFetcher_button" class="btn btn-outline-info" type="button">Request</button>
+							</div>
+						</div>		
+					</div>
+				</div>
+				<label for="form_dataMeans">Means of transportation &dash; <em>(separate with comma <em>,</em> and <strong>only</strong> with a comma - so no space)</em></label>
+				<input id="form_dataMeans" class="form-control" name="dataMeans" title="data.means" type="text" />
+				<hr />
+				<div id="form_output" class="wall wall-sm" style="display:none;">
+					<textarea class="form-control" rows="25"></textarea>
+					<p>Add this snippet to <code>data/ext/markers.json.js</code> (alphabetically sorted by the commentId) and create a commit with the description <code id="form_output_commit"></code>.</p>
+				</div>
+			</div>
+			
+			<button id="form_submit" class="btn btn-primary" type="button">Generate snippet</button>
+		</form>
+	</div>
+</main>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="data/js/createEntry.js"></script>
+</body>
 </html>
