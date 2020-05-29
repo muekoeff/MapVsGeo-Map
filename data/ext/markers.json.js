@@ -739,4 +739,23 @@ var markers = {
 			commentsIdOriginal: "bf6ove",
 		}
 	},
+	"frzz1m": {
+		data: {
+			displayName: "Singapore",
+			means: [
+				"mrt"
+			],
+			position: {
+				lat: 1.357107,
+				lng: 103.8194992
+			}
+		},
+		meta: {
+			adder: "naseweis520"
+		},
+		reddit: {
+			author: "bananasolid",
+			commentsId: "frzz1m",
+		}
+	},
 };
